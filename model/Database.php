@@ -32,8 +32,7 @@ class Database {
 // Una sola conexion para toda la aplicacion (singleton):
         if (null == self::$conexion) {
             try {
-                self::$conexion = new PDO("mysql:host=" . self::$dbHost . ";" . "dbname=" . self::
-                        $dbName, self::$dbUsername, self::$dbUserPassword);
+                   self::$conexion =  new PDO('pgsql:ec2-54-243-150-10.compute-1.amazonaws.com ;port=5432;dbname=d2pbup4t2jvtn9', 'rdiqusgywiyemp', '9b5453c4eb6dd580c4f289d2fe4630fd0c072f3a628e0795560097edf89e234e'); 
             } catch (PDOException $e) {
                 die($e >
                         getMessage());
